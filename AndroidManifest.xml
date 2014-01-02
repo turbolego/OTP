@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.otpsms"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+<uses-permission android:name="android.permission.RECEIVE_SMS" />
+   <uses-permission android:name="android.permission.SEND_SMS" />
+   <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+        
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="17" />
+    
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+                <activity
+            android:name="com.example.otpsms.ContactList"
+            android:label="@string/app_name" >
+        </activity>
+        
+                 <activity
+            android:name="com.example.otpsms.ContactDbHandler"
+            android:label="@string/ContactDbHandler" >
+        </activity>
+        
+                                  <activity
+            android:name="com.example.otpsms.EditContact"
+            android:label="@string/title_activity_rules" >
+        </activity>
+                      
+                                  <activity
+            android:name="com.example.otpsms.AddContact"
+            android:label="@string/title_activity_add" >
+        </activity>
+        
+                                  <activity
+            android:name="com.example.otpsms.NewSms"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        
+      <activity
+            android:name="com.example.otpsms.Sms"
+            android:label="@string/sms" >
+        </activity>
+        
+   	 <activity
+            android:name="com.example.otpsms.SmsDbHandler"
+            android:label="@string/SmsDbHandler" >
+        </activity>
+        
+   	 <activity
+            android:name="com.example.otpsms.SmsList"
+            android:label="@string/SmsList" >
+        </activity>
+        
+       	 <activity
+            android:name="com.example.otpsms.EditSms"
+            android:label="@string/EditSms" >
+        </activity>
+                    
+                    	 <activity
+            android:name="com.example.otpsms.MainMenu"
+            android:label="@string/MainMenu" >
+        </activity>       
+        
+                    	                     	 <activity
+            android:name="com.example.otpsms.About"
+            android:label="@string/About" >
+        </activity>          
+    
+                           
+                                  
+                                  
+                                  
+<receiver android:name=".SmsReceiver"> 
+            <intent-filter> 
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" /> 
+            </intent-filter> 
+        </receiver>
+
+                                  
+        
+    </application>
+
+    
+</manifest>
